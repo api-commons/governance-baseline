@@ -1,0 +1,8 @@
+[
+  { "code": "operation-tags", "message": "Operation must have tags.", "severity": 1, "source": "apis/invoices.yaml", "path": ["paths", "/v1/legacy", "get", "tags"] },
+  { "code": "operation-description", "message": "Operation must have a description.", "severity": 1, "source": "apis/invoices.yaml", "path": ["paths", "/invoices", "post", "description"] },
+  { "code": "info-contact", "message": "Info object must have a contact.", "severity": 1, "source": "apis/invoices.yaml", "path": ["info"] },
+  { "code": "operation-tags", "message": "Operation must have tags.", "severity": 1, "source": "apis/invoices.yaml", "path": ["paths", "/invoices", "get", "tags"] },
+  { "code": "operation-description", "message": "Operation must have a description.", "severity": 1, "source": "apis/orders.yaml", "path": ["paths", "/orders", "post", "description"] },
+  { "code": "no-$ref-siblings", "message": "$ref cannot be placed next to any other properties.", "severity": 0, "source": "apis/orders.yaml", "path": ["components", "schemas", "Order", "properties", "customer"] }
+]

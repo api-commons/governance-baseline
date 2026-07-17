@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Governance Baseline — adopt Spectral on a legacy estate without a wall of red</title>
+    <meta name="description" content="Snapshot a baseline of the Spectral violations you have today, then ratchet: fail only NEW violations while baselined ones are suppressed, hold a warning budget, and burn the baseline down to zero. Runs entirely in your browser." />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <!-- Google tag (gtag.js) — API Commons -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WNSPT4B4S8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-WNSPT4B4S8');
+    </script>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <strong>Governance Baseline</strong>
+        <span class="tag">baseline.apicommons.org</span>
+      </div>
+      <nav>
+        <a href="#" id="nav-about" title="What a baseline & ratchet are">About</a>
+        <a href="https://apis.io" target="_blank" rel="noopener">APIs.io</a>
+        <a href="https://apicommons.org" target="_blank" rel="noopener">API Commons</a>
+        <a href="https://github.com/api-commons/governance-baseline" target="_blank" rel="noopener">GitHub</a>
+        <button id="engage-ae" class="engage-btn" type="button" title="Work with API Evangelist on API governance">Get help</button>
+      </nav>
+    </header>
+    <!-- Laneworks ad network (ads.laneworks.net) -->
+    <script async src="https://ads.laneworks.net/embed.js"></script>
+    <div data-laneworks-ad="top-banner"></div>
+
+
+    <div class="toolbar">
+      <button class="measure-btn" id="reconcile" type="button">Reconcile ▸</button>
+      <button class="ghost-btn" id="load-sample" type="button">Load sample</button>
+      <button class="ghost-btn" id="snapshot" type="button">Snapshot baseline ↓</button>
+      <div class="counts" id="status" aria-live="polite"></div>
+    </div>
+
+    <details class="drawer" id="drawer" open>
+      <summary>Inputs — new Spectral results, baseline file &amp; warning budget</summary>
+      <div class="io-grid">
+        <div class="io">
+          <h4>New Spectral results <span class="muted">(<code>spectral lint -f json</code>)</span>
+            <span class="io-btns"><button class="mini-btn" id="up-results" type="button">Upload</button></span>
+          </h4>
+          <textarea id="results-text" spellcheck="false" placeholder="Paste your latest Spectral JSON output…"></textarea>
+          <input type="file" id="file-results" accept=".json,application/json" hidden />
+        </div>
+        <div class="io">
+          <h4>Baseline <span class="muted">(YAML / JSON)</span>
+            <span class="io-btns"><button class="mini-btn" id="up-baseline" type="button">Upload</button><button class="mini-btn" id="dl-baseline" type="button">Download</button></span>
+          </h4>
+          <textarea id="baseline-text" spellcheck="false" placeholder="Paste a saved baseline — or click “Snapshot baseline” to create one from the results on the left…"></textarea>
+          <input type="file" id="file-baseline" accept=".yaml,.yml,.json" hidden />
+          <div class="budget" id="budget">
+            <label class="chk"><input type="checkbox" id="b-noincrease" checked /> Count must not increase per rule</label>
+            <label>Max total warnings <span class="muted">(blank = no cap)</span><input id="b-maxwarn" type="number" min="0" placeholder="e.g. 25" /></label>
+          </div>
+        </div>
+      </div>
+    </details>
+
+    <main class="stage">
+      <section id="report"><div class="loading" id="loading">Loading…</div></section>
+    </main>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

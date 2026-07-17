@@ -1,0 +1,43 @@
+version: "0.1"
+created: "2026-05-01"
+ruleset: .spectral.yaml
+entries:
+  - fingerprint: "operation-tags::apis/invoices.yaml::paths//v1/legacy/get/tags"
+    code: operation-tags
+    source: apis/invoices.yaml
+    path: paths//v1/legacy/get/tags
+    count: 1
+    message: Operation must have tags.
+    severity: 1
+
+  - fingerprint: "operation-description::apis/invoices.yaml::paths//invoices/post/description"
+    code: operation-description
+    source: apis/invoices.yaml
+    path: paths//invoices/post/description
+    count: 1
+    message: Operation must have a description.
+    severity: 1
+
+  - fingerprint: "info-contact::apis/invoices.yaml::info"
+    code: info-contact
+    source: apis/invoices.yaml
+    path: info
+    count: 1
+    message: Info object must have a contact.
+    severity: 1
+
+  - fingerprint: "operation-operationId::apis/invoices.yaml::paths//v1/legacy/post"
+    code: operation-operationId
+    source: apis/invoices.yaml
+    path: paths//v1/legacy/post
+    count: 1
+    message: Operation must have an operationId.
+    severity: 0
+
+  - fingerprint: "oas3-schema::apis/invoices.yaml::components/schemas/Invoice/properties/total"
+    code: oas3-schema
+    source: apis/invoices.yaml
+    path: components/schemas/Invoice/properties/total
+    count: 1
+    message: Schema must be valid.
+    severity: 0
