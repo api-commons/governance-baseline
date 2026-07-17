@@ -72,12 +72,16 @@ new, fixed, stale, and an over-budget rule.
 Everything runs client-side. The lint results and baseline you paste never leave the page —
 there is no server.
 
-Part of the [API Commons](https://apicommons.org/tools/) governance tools, alongside
-[Governance Coverage](https://github.com/api-commons/governance-coverage),
-[Governance Waivers](https://github.com/api-commons/governance-waivers),
-[API Validator](https://github.com/api-commons/api-validator),
-[Spectral Ruleset Studio](https://github.com/api-commons/spectral-ruleset-studio), and the
-[API Governance Graph](https://github.com/api-commons/api-governance-graph).
+## Part of API Commons
+
+An open, browser-first tool from **[API Commons](https://apicommons.org)** — free, no backend, your data stays in your browser. Browse the full set at **[apicommons.org/tools](https://apicommons.org/tools/)**.
+
+**Related tools**
+- [Governance Scorecard](https://scorecard.apicommons.org) — the longitudinal health trend of your governance
+- [Governance Waivers](https://waivers.apicommons.org) — sanctioned, owned, expiring governance exceptions
+- [Governance Coverage](https://coverage.apicommons.org) — how much of your API your rules actually check
+- [Governance Pipeline Auditor](https://auditor.apicommons.org) — audit a repo's Spectral CI maturity
+- [API Validator](https://validator.apicommons.org) — lint OpenAPI/AsyncAPI/Arazzo/JSON Schema in your browser
 
 ---
 
