@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
-  "description": "A browser-first tool to make Spectral/Spotlight governance adoptable on a legacy estate — snapshot a baseline of the violations you have today, then ratchet: fail only NEW violations while baselined ones are suppressed, track a warning budget, and burn the baseline down to zero.",
+  "description": "A browser-first tool to make Spectral and OpenLint governance adoptable on a legacy estate — snapshot a baseline of the violations you have today, then ratchet: fail only NEW violations while baselined ones are suppressed, track a warning budget, and burn the baseline down to zero.",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

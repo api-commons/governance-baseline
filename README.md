@@ -1,6 +1,6 @@
 # Governance Baseline / Ratchet
 
-A browser-first tool that makes Spectral/Spotlight governance **adoptable on a legacy estate
+A browser-first tool that makes Spectral and OpenLint governance **adoptable on a legacy estate
 without a wall of red** — snapshot the violations you have today, then ratchet so the build
 **fails only NEW violations** while the debt you already knew about burns down to zero. No
 backend, no accounts; runs entirely in your browser. Live at
